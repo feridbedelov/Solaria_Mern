@@ -1,11 +1,11 @@
-const express = require("express")
+const express = require("express");
 const dbConnect = require("./config/db")
 const app = express()
 const PORT = process.env.PORT || 5000
 
 dbConnect()
 
-
+app.use(express.json({extended:false}))
 
 app.get("/",(req,res) => res.send("Okay"))
 
