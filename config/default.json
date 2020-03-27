@@ -1,6 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://ferid123:ferid123@solaria-3ugty.mongodb.net/test?retryWrites=true&w=majority",
     "jwtSecret": "yaxsioglanlarinqardasi",
     "githubClientId": "b6289c586c58708324ab",
-    "clientSecret":"801ae25cac50941ac6bc2fa72dd5cd39de8da2ca"
+    "clientSecret":"801ae25cac50941ac6bc2fa72dd5cd39de8da2ca",
+    "mongoURI":"mongodb+srv://ferid123:ferid123@solaria-3ugty.mongodb.net/test?retryWrites=true&w=majority"
 }

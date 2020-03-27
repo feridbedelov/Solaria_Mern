@@ -9,6 +9,8 @@ const router = express.Router()
 const User = require("../../models/Users")
 
 
+// Register a user  /api/users/
+
 router.post("/",
     [
         // validation rules
