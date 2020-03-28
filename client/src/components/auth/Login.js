@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
+import { login } from '../../store/actions/auth'
+import {connent, connect} from "react-redux"
 
-const Login = () => {
+
+const Login = ({login,isAuth}) => {
 
     const [formData, setFormData] = useState({
         email: "",
@@ -12,7 +15,11 @@ const Login = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-       console.log(formData)
+        login(formData.email , formData.password);
+    }
+
+    if(isAuth){
+        return <Redirect to="/dashboard" />
     }
 
     return (
@@ -42,4 +49,12 @@ const Login = () => {
     )
 }
 
-export default Login
+
+const mapStateToProps = state => {
+    return {
+        isAuth : state.auth.isAuth
+    }
+}
+
+
+export default connect(mapStateToProps,{login})(Login)
